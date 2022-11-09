@@ -1,7 +1,7 @@
 // Created by: Alex Nelson
 // Created on: Oct 2022
 //
-// This program calculates area of a triangle
+// This program calculates volume of a sphere
 using System;
 
 class Program
@@ -9,19 +9,16 @@ class Program
     public static void Main(string[] args)
     {
         //Input
-        int length;
-        int width;
-        int area;
-        Console.WriteLine("This program calculates the area of a triangle");
-        Console.WriteLine("");
-        Console.WriteLine("Enter length in cm: ");
-        length = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter width in cm: ");
-        width = Convert.ToInt32(Console.ReadLine());
-        area = length * width / 2;
+        double radius;
+        double volume;
+        Console.WriteLine("This program calculates the volume of a sphere");
+        Console.WriteLine("\nEnter radius in cm: ");
+        radius = Convert.ToDouble(Console.ReadLine());
+        //Proccess
+        volume = 4.0 / 3.0 * Math.PI * Math.Pow(radius, 3);
         //Output
         Console.WriteLine("");
-        Console.WriteLine("The area is: " + area + " cm²");
+        Console.WriteLine("The volume is: " + volume + " cm³");
         Console.WriteLine("\nDone");
     }
 }
